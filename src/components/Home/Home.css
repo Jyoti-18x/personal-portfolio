@@ -1,0 +1,280 @@
+#home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.lefthome {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.righthome {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.righthome img {
+  width: 60%;
+  border-radius: 400px;
+  filter: drop-shadow(2px 2px 20px rgb(116, 201, 225));
+}
+.homedetails {
+  font-size: 2vmax;
+}
+.line1 {
+  font-size: 0.8em;
+}
+.line2 {
+  font-size: 2.5em;
+  background: linear-gradient(to right, rgb(66, 180, 205), white);
+  background-clip: text;
+  color: transparent;
+}
+.line3 {
+  font-size: 1em;
+}
+.homedetails button {
+  padding: 10px 30px;
+  background-color: rgb(66, 180, 205);
+  color: black;
+  border: 2px solid rgb(66, 180, 205);
+  margin-top: 30px;
+  border-radius: 20px;
+  font-size: 19px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.homedetails button:hover {
+  background-color: transparent;
+  color: rgb(66, 180, 205);
+}
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+/* Base Social Icon Styling */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple Effect */
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.social-icon:hover::before {
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+}
+
+/* Icon positioning above ripple */
+.social-icon > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Active state */
+.social-icon:active {
+  transform: translateY(-5px) scale(1.05);
+  transition: all 0.1s ease;
+}
+
+/* GitHub Icon */
+.github {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.github:hover {
+  background: linear-gradient(135deg, #444 0%, #666 100%);
+  box-shadow: 0 15px 35px rgba(51, 51, 51, 0.4);
+}
+
+/* LinkedIn Icon */
+.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.linkedin:hover {
+  background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+  box-shadow: 0 15px 35px rgba(0, 119, 181, 0.4);
+}
+
+/* Instagram Icon */
+.instagram {
+  background: linear-gradient(
+    135deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.instagram:hover {
+  background: linear-gradient(
+    135deg,
+    #f1a543 0%,
+    #e7784c 25%,
+    #dd3753 50%,
+    #cd3376 75%,
+    #bd2898 100%
+  );
+  box-shadow: 0 15px 35px rgba(240, 148, 51, 0.4);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Add floating animation to all icons */
+.social-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.social-icon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.social-icon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* Bounce effect on hover */
+.social-icon:hover {
+  animation: none;
+  transform: translateY(-8px) scale(1.1);
+}
+
+/* Glowing effect */
+.social-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.github::after {
+  box-shadow: 0 0 20px #555, 0 0 40px #555, 0 0 60px #555;
+}
+
+.linkedin::after {
+  box-shadow: 0 0 20px #0077b5, 0 0 40px #0077b5, 0 0 60px #0077b5;
+}
+
+.instagram::after {
+  box-shadow: 0 0 20px #e6683c, 0 0 40px #e6683c, 0 0 60px #e6683c;
+}
+
+.social-icon:hover::after {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse;
+    /* text-align: center; */
+  }
+  .lefthome {
+    width: 100%;
+    height: 50vh;
+  }
+  .righthome {
+    width: 100%;
+    height: 50vh;
+    align-items: end;
+  }
+   .righthome img{
+    max-width: 250px;
+    margin-top: 20px;
+    max-height: 250px;
+  } 
+}
