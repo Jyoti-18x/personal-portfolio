@@ -5,6 +5,7 @@ import fw from "../../assets/Food.png";
 import weather from "../../assets/weather.png";
 import calc from "../../assets/calc1.png";
 import ise from "../../assets/ise.png";
+import hb from "../../assets/Hotel.png"
 import "./Projects.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -16,6 +17,11 @@ function Projects() {
       title: "PERSONAL PORTFOLIO",
       image: port,
       liveurl: "https://jytiiii.netlify.app/",
+    },
+      {
+      title:"HOTEL-BOOKING WEBSITE",
+      image: hb,
+      liveurl:"https://hotelbookingssamhbdj.netlify.app/"
     },
     {
       title: "FOOD DELIVERY WEBSITE",
@@ -37,6 +43,7 @@ function Projects() {
       image: ise,
       liveurl: "https://jyoti-18x.github.io/Image-search-engine/",
     },
+  
   ];
   const handleLivePreview = (url, title) => {
     if (url && url.length > 0) {
