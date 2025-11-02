@@ -6,6 +6,7 @@ import weather from "../../assets/weather.png";
 import calc from "../../assets/calc1.png";
 import ise from "../../assets/ise.png";
 import hb from "../../assets/Hotel.png"
+import ai from "../../assets/Aiprojectpic.png"
 import "./Projects.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -13,6 +14,12 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 function Projects() {
   const projectsData = [
+      {
+      title:"AI POWERED ECOMMERCE WEBSITE",
+      image: ai,
+      liveurl:"https://onecart-frontend-dom2.onrender.com",
+
+    },
     {
       title: "PERSONAL PORTFOLIO",
       image: port,
@@ -43,6 +50,7 @@ function Projects() {
       image: ise,
       liveurl: "https://jyoti-18x.github.io/Image-search-engine/",
     },
+  
   
   ];
   const handleLivePreview = (url, title) => {

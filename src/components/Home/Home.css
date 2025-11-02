@@ -13,7 +13,7 @@
   color: white;
 }
 .righthome {
-  width: 50%;
+  width: 80%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -273,8 +273,8 @@
     align-items: end;
   }
    .righthome img{
-    max-width: 250px;
+    max-width: 220px;
     margin-top: 20px;
-    max-height: 250px;
+    max-height: 220px;
   } 
 }

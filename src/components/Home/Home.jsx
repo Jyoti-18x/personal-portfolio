@@ -4,7 +4,7 @@ import man from "../../assets/Jyoti.jpg";
 import { ReactTyped } from "react-typed";
 import { useGSAP } from "@gsap/react";
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import newcv from "../../assets/Jyotir.pdf"
+import newcv from "../../assets/newcv.pdf"
 import gsap from "gsap";
 function Home() {
   const socialLinks = {
